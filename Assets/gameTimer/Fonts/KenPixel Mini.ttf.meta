@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 006ccbbf045c3d84eb047ed11006cee9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - KenPixel Mini
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6d4982f02a83b354385481ae10ea5984, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

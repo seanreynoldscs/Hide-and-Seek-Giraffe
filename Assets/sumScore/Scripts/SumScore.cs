@@ -19,13 +19,15 @@ public class SumScore {
     /// </remarks>
     /// <param name="pointsToAdd">Number of points to add</param>
     public static void Add (int pointsToAdd) {
-        Debug.Log(pointsToAdd + " points " + ((pointsToAdd > 0) ? "added" : "removed"));
-        Score += pointsToAdd; // Add points to current score
-        if (MgrSet()) {
-            // Make sure we don't go negative unless we're supposed to
-            if (Score < 0 && !mgr.allowNegative)
-                Score = 0; // Reset score to 0
-            mgr.Updated(); // Let the manager know we've changed the score
+        if (!GameTimer.TimerDone()){
+            Debug.Log(pointsToAdd + " points " + ((pointsToAdd > 0) ? "added" : "removed"));
+            Score += pointsToAdd; // Add points to current score
+            if (MgrSet()) {
+                // Make sure we don't go negative unless we're supposed to
+                if (Score < 0 && !mgr.allowNegative)
+                    Score = 0; // Reset score to 0
+                mgr.Updated(); // Let the manager know we've changed the score
+            }
         }
     }
 

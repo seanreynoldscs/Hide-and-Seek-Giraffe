@@ -15,6 +15,7 @@ public class CharacterHelpter : MonoBehaviour
         xrOrigin = GetComponent<XRRig>();
         characterController = GetComponent<CharacterController>();
         driver = GetComponent<CharacterControllerDriver>();
+        GameTimer.Start();
     }
 
     // Update is called once per frame
