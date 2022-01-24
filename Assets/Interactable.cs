@@ -25,6 +25,7 @@ public class Interactable : MonoBehaviour
     public void SetPosition(){
         SumScore.Add(1);
         transform.position = new Vector3(Random.Range(-75, 75), 0, Random.Range(-75, 75));
+        transform.Rotate(0.0f, 90.0f, 0.0f, Space.World);
         Debug.Log("HERE");
     }
 }

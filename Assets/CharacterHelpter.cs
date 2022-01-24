@@ -12,16 +12,18 @@ public class CharacterHelpter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //SumScore.ClearHighScore();
         xrOrigin = GetComponent<XRRig>();
         characterController = GetComponent<CharacterController>();
         driver = GetComponent<CharacterControllerDriver>();
         GameTimer.Start();
     }
-
     // Update is called once per frame
     void Update()
     {
         UpdateCharacterController();
+        GameTimer.Update();
+
     }
     /// <summary>
         /// Updates the <see cref="CharacterController.height"/> and <see cref="CharacterController.center"/>

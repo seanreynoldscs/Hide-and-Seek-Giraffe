@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 /// <summary>
 /// Simple Time manager. Requires GameTimerManager attached to game object in scene.
 /// </summary>
@@ -20,8 +20,8 @@ public class GameTimer {
     /// </remarks>
     /// <param name="pointsToAdd">Number of points to add</param>
     public static void Start () {
-        EndTime = System.DateTime.Now + System.TimeSpan.FromMinutes(gameTime);
         gameTime = 2.0;
+        EndTime = System.DateTime.Now + System.TimeSpan.FromMinutes(gameTime);
         if (MgrSet()) {
             // Make sure we don't go negative unless we're supposed to
             mgr.Updated(); // Let the manager know we've changed the Time
@@ -43,6 +43,8 @@ public class GameTimer {
             if(gameTime > 0){
                 SumScore.SaveHighScore();
                 gameTime = 0;
+                
+                SceneManager.LoadScene("Menu");//SceneManager.GetActiveScene().buildIndex + 1);
             }
         }else{
             Time = EndTime - System.DateTime.Now;
